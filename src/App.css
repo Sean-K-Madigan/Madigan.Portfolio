@@ -1,0 +1,551 @@
+/* Colors */
+:root {
+  --battleship: #969A97;
+  --timberwolf: #D6D1CD;
+  --gunmetal: #292F36;
+  --amaranth: #B12F47;
+  --fern: #576F2F;
+  --engineering: #B80C09;
+  --palatinate: #700C66;
+  --text-shadow: #67676799;
+  --bg-opacity: 0.5;
+}
+
+/* Reset */
+* {
+  font-family: 'Cutive Mono', 'DM Sans', 'Poppins', serif;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Body */
+body {
+  background: linear-gradient(to bottom, var(--gunmetal), var(--gunmetal), var(--battleship), var(--battleship), var(--timberwolf), var(--battleship), var(--battleship), var(--gunmetal), var(--gunmetal));
+}
+
+/* Header */
+header {
+  /* background-color: var(--gunmetal); */
+  height: fit-content;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-left: 20px;
+  /* margin-right: 20px; */
+}
+
+.bar1, .bar2, .bar3 {
+  height: 10px;
+  width: 72px;
+  background-color: var(--timberwolf);
+  margin: 10px 0px;
+  transition: 0.4s;
+}
+
+/* Change color of menu icon on hover */
+.menu-icon:hover .bar1, .menu-icon:hover .bar2, .menu-icon:hover .bar3 {
+  background-color: var(--amaranth);
+  transform: scale(1.1, 1.1);
+}
+
+/* Give click effect of menu icon */
+.menu-icon:active .bar1, .menu-icon:active .bar2, .menu-icon:active .bar3 {
+  transform: scale(1.05, 1.05);
+  transition: 0.05s;
+} 
+
+
+
+
+
+/* For use when I can update the code to allow for the menu icon to become an X */
+/* .change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+} */
+
+
+
+
+
+
+/* Header paragraph */
+#header-paragraph {
+  color: var(--timberwolf);
+  width: 50%;
+  font-size: 32px;
+  margin-left: 10%;
+  position: relative;
+  padding-top: 115px;
+  text-shadow: 3px 3px var(--text-shadow);
+  transition: 1s;
+}
+
+#header-paragraph:hover {
+  transition: 1s;
+}
+
+#header-paragraph:hover::after {
+  content: 'Click below to see more ↓';
+  position: absolute;
+  left: 400px;
+  bottom: -150px;
+  width: 66%;
+  color: var(--gunmetal);
+  background-color: var(--fern);
+  border: 2px solid var(--battleship);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 400;
+  animation: fadeIn 1s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+
+
+
+/* This makes the header paragraph appear to be typed in on page load */
+.letter {
+  opacity: 0;
+  animation: typewriter 0s linear forwards;
+  animation-delay: calc(0.025s * var(--i) + 0.75s);
+}
+
+@keyframes typewriter {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+
+
+
+
+/* Main title color and animations */
+.main-title {
+  color: var(--timberwolf);
+  text-align: right;
+  margin-right: 3%;
+  /* margin-left: 53%; */
+  padding: 0px;
+  font-size: 300px;
+  font-weight: 200;
+  padding-top: 150px;
+}
+
+.main-title a {
+  color: var(--timberwolf);
+  text-decoration: none;
+  font-weight: 200;
+  transition: 1.5s;
+}
+
+.main-title:hover a{
+  color: var(--amaranth);
+  cursor: pointer;
+  transform: scale(1.05,1.05);
+  transition: 1.5s;
+  text-shadow: 15px 10px black;
+}
+
+.main-title:active a{
+  transform: scale(1.025,1.025);
+  transition: 0.05s;
+}
+
+
+
+
+
+/* Navbar settings */
+.navbar {
+  /* background-color: var(--gunmetal); */
+  height: 100px;
+  border-top: 2px solid var(--battleship);
+  border-bottom: 2px solid var(--battleship);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul li a {
+  color: var(--timberwolf);
+  font-size: 32px;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navbar ul li a:hover {
+  box-shadow: 0px 0px 20px 10px var(--amaranth);
+  transform: scale(1.1, 1.1);
+  text-shadow: 5px 5px var(--gunmetal);
+}
+
+
+
+
+
+/* Main */
+main {}
+
+
+
+
+
+/* About section */
+#about {
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  text-align: center;
+  background-image: url('../images/Boat\ Photo.JPG');
+  background-position: 0px -125px;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 4px solid var(--engineering);
+  transition: 1s;
+}
+
+#about:hover {
+  border: 4px solid var(--gunmetal);
+  /* background-color: var(--engineering); */
+}
+
+#bio-title-container {
+  width: 55%;
+}
+
+.section-title {
+  margin: 20px 0px;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--timberwolf);
+}
+
+/* .profile-pic {
+  border: 3px solid var(--gunmetal);
+  border-radius: 40%;
+  margin: 20px 0px;
+
+} */
+
+#bio-container {
+  width: 55%;
+}
+
+.bio-text {
+  margin: 15px 0px;
+  font-size: 20px;
+  color: white;
+}
+
+.dog-pics img {
+  border: 3px solid var(--gunmetal);
+  border-radius: 40%;
+  margin: 20px 10px;
+}
+
+
+
+
+
+/* Skills section */
+#skills {
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(var(--gunmetal), var(--bg-opacity));
+  background-position: 0px -125px;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 4px solid var(--palatinate);
+  transition: 1s;
+}
+
+#skills:hover {
+  border: 4px solid var(--gunmetal);
+  background-color: var(--palatinate);
+}
+
+.skills {
+  color: var(--gunmetal);
+  transition: 1s;
+}
+
+#skills:hover h2 {
+  color: var(--timberwolf);
+  text-shadow: 3px 3px var(--gunmetal);
+  transition: 1s;
+}
+
+#skills:hover .label {
+  color: var(--timberwolf);
+  transition: 1s;
+}
+
+.skills-list {
+  width: 100%;
+  margin: auto;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.label {
+  font-size: 20px;
+  color: var(--gunmetal);
+  text-align: left;
+  transition: 1s;
+}
+
+.bar {
+  height: 20px;
+  background-color: var(--gunmetal);
+  border-radius: 3px;
+  transition: 1s;
+}
+
+#skills:hover .bar {
+  background-color: var(--timberwolf);
+  transition: 1s;
+}
+
+.spectrum {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+/* Work section */
+#projects {
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  text-align: center;
+  /* background-color: var(--gunmetal); */
+  border-radius: 20px;
+  border: 4px solid var(--fern);
+  transition: 1s;
+}
+
+#projects:hover {
+  background-color: var(--fern);
+  border: 4px solid var(--gunmetal);
+}
+
+#projects:hover h2 {
+  text-shadow: 3px 3px var(--gunmetal);
+}
+
+.work-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project {
+  width: 29%;
+  /* height: 300px; */
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.project:hover {
+  /* border: 2px solid var(--gunmetal); */
+}
+
+.projects-subtitle {
+  margin: 20px 0px;
+  font-size: 30px;
+  font-weight: 400;
+  /* text-shadow: 3px 3px var(--text-shadow); */
+  transition: 1s;
+}
+
+.project a img {
+  border: 3px solid var(--gunmetal);
+  border-radius: 8px;
+  transition: .7s;
+}
+
+.project a img:hover {
+  transform: scale(1.02, 1.02);
+}
+
+.project a img:active {
+  transform: scale(1.01, 1.01);
+  transition: .0s;
+}
+
+.repo-link {
+  font-size: large;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: large;
+}
+
+.projects, .projects-subtitle, .repo-link, .description {
+  color: var(--gunmetal);
+  transition: 1s;
+}
+
+#projects:hover h2, #projects:hover .projects-subtitle, #projects:hover .repo-link, #projects:hover .description{
+  color: var(--timberwolf);
+  transition: 1s;
+}
+
+.repo-link:hover {
+  color: var(--amaranth);
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Resume section */
+#resume {
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  text-align: center;
+  /* background-color: var(--gunmetal); */
+  border-radius: 20px;
+  border: 4px solid var(--amaranth);
+  transition: 1s;
+}
+
+#resume:hover {
+  background-color: var(--amaranth);
+  border: 4px solid var(--gunmetal);
+}
+
+#resume:hover h2 {
+  text-shadow: 3px 3px var(--gunmetal);
+}
+
+.section-title a {
+  color: var(--timberwolf);
+  text-decoration: none;
+  transition: .6s;
+}
+
+.section-title a:hover {
+  color: var(--gunmetal);
+  text-shadow: 3px 3px var(--text-shadow);
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Footer contact form */
+#contact {
+  /* background-color: var(--gunmetal); */
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.footer-title {
+  font-size: 40px;
+  color: var(--timberwolf);
+  text-shadow: 3px 3px var(--text-shadow);
+}
+
+.contact-info {
+  font-size: 22px;
+  color: var(--timberwolf);
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: var(--battleship);
+  transition: .5s;
+}
+
+.contact-info a:hover {
+  color: var(--amaranth)
+  
+}
+
+.emailAndMessage {
+  display: flex;
+  flex-direction: column;
+}
+
+#email {
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#message-box {
+  height: 200px;
+  width: 500px;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#sendBtn {
+  font-size: 22px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
