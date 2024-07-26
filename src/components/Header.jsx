@@ -1,4 +1,4 @@
-export default function Header(onPageChange) {
+export default function Header({onPageChange}) {
   return (
     <>
       <header>
@@ -9,3 +9,5 @@ export default function Header(onPageChange) {
     </>
   );
 }
+
+// title click navigation not working

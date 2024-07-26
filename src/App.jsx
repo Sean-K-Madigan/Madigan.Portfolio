@@ -27,7 +27,7 @@ function App() {
       case 'Resume':
         return <Resume />
       default:
-        return <Header />
+        return <Header onPageChange = {handlePageChange}/>
     }
   }
 
