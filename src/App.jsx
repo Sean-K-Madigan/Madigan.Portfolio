@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Header } from './components/Header'
-import { Navigation } from './components/Navigation'
-import { Footer } from './components/Footer'
-import { About } from './components/About';
-import { SkillList } from './components/SkillList';
-import { ProjectList } from './components/Projects';
-import { Resume } from './components/Resume';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import About from './components/About';
+import SkillList from './components/SkillList';
+import ProjectList from './components/ProjectList';
+import Resume from './components/Resume';
 import './App.css'
 
 function App() {
@@ -42,3 +43,11 @@ function App() {
 }
 
 export default App
+
+{/* <Routes>
+  <Route path="/" element={<Header />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/skills" element={<SkillList />} />
+  <Route path="/projects" element={<ProjectList />} />
+  <Route path="/resume" element={<Resume />} />
+</Routes> */}

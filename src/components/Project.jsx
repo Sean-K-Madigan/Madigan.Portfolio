@@ -1,4 +1,4 @@
-export function Project({projObject}) {
+export default function Project({projObject}) {
   return (
     <>
       <article className="project" id="proj">
